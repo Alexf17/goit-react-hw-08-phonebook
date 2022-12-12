@@ -13,5 +13,4 @@ export const Input = styled.input`
   font-size: 15px;
   font-weight: 600;
   background-color: rgb(226 231 232);
-  
 `;
