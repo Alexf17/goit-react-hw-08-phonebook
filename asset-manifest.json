@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.688c090d.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.7e898ec7.js",
-    "static/js/304.6ad23c14.chunk.js": "/goit-react-hw-08-phonebook/static/js/304.6ad23c14.chunk.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.307fe46a.js",
+    "static/js/304.56e1980b.chunk.js": "/goit-react-hw-08-phonebook/static/js/304.56e1980b.chunk.js",
     "static/js/643.809f638b.chunk.js": "/goit-react-hw-08-phonebook/static/js/643.809f638b.chunk.js",
     "static/js/977.ad3cc5ee.chunk.js": "/goit-react-hw-08-phonebook/static/js/977.ad3cc5ee.chunk.js",
     "static/media/Bell-Centennia.png": "/goit-react-hw-08-phonebook/static/media/Bell-Centennia.6b1fa26b71309c4c97b3.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.688c090d.css.map": "/goit-react-hw-08-phonebook/static/css/main.688c090d.css.map",
-    "main.7e898ec7.js.map": "/goit-react-hw-08-phonebook/static/js/main.7e898ec7.js.map",
-    "304.6ad23c14.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/304.6ad23c14.chunk.js.map",
+    "main.307fe46a.js.map": "/goit-react-hw-08-phonebook/static/js/main.307fe46a.js.map",
+    "304.56e1980b.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/304.56e1980b.chunk.js.map",
     "643.809f638b.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/643.809f638b.chunk.js.map",
     "977.ad3cc5ee.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/977.ad3cc5ee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.688c090d.css",
-    "static/js/main.7e898ec7.js"
+    "static/js/main.307fe46a.js"
   ]
 }
