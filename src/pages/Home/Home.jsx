@@ -11,7 +11,13 @@ export default function Home() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <Wrapper>
-      {!isLoggedIn && (
+      {isLoggedIn ? (
+        <>
+          <PageTitle>
+            Now you can store and edit your contacts in one place!
+          </PageTitle>
+        </>
+      ) : (
         <>
           {' '}
           <PageTitle>Welcome to Phonebook</PageTitle>

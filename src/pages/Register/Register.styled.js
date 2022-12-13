@@ -6,6 +6,7 @@ export const Form = styled.form`
   flex-direction: column;
   max-width: 350px;
   align-items: stretch;
+  background-color: rgb(240, 240, 240, 0.6);
 `;
 
 export const PageTitle = styled.h1`

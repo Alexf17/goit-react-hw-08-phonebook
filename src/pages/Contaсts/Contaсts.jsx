@@ -5,6 +5,7 @@ import { selectIsLoading } from 'redux/contacts/selectors';
 
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactsList } from 'components/ContactList/ContactList';
+import { PageTitle } from 'pages/Register/Register.styled';
 
 export default function Contacts() {
   const isLoggedIn = useSelector(selectIsLoading);
@@ -19,7 +20,7 @@ export default function Contacts() {
 
   return (
     <>
-      <h2>Contacts</h2>
+      <PageTitle>Contacts</PageTitle>
       <ContactForm />
       <ContactsList />
     </>

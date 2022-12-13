@@ -5,10 +5,10 @@ export const AuthNav = () => {
   return (
     <div>
       <Item to="/register">
-        <Button variant="outlined">Register</Button>
+        <Button variant="contained">Register</Button>
       </Item>
       <Item to="/login">
-        <Button variant="outlined">Log In</Button>
+        <Button variant="contained">Log In</Button>
       </Item>
     </div>
   );

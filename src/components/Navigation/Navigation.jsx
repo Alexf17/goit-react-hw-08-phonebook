@@ -1,19 +1,19 @@
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import { useAuth } from 'hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
   return (
-    <div>
+    <Stack spacing={2} direction="row">
       <NavLink to="/">
         <Button variant="contained">Home</Button>
       </NavLink>
       {isLoggedIn && (
         <NavLink to="/contacts">
-          <button>Contacts</button>
+          <Button variant="contained">Contacts</Button>
         </NavLink>
       )}
-    </div>
+    </Stack>
   );
 };

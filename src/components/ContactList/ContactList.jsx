@@ -55,29 +55,51 @@ export const ContactsList = () => {
           toggleUpdatePage={toggleUpdatePage}
         />
       )}
-      {contacts.length > 0 && <Filter />}
+
       {!isOpen && (
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Number</TableCell>
-                <TableCell>Delete</TableCell>
-                <TableCell>Update</TableCell>
-              </TableRow>
-            </TableHead>
-            {filteredContacts.map(({ id, name, number }) => (
-              <ContactsListItem
-                key={id}
-                name={name}
-                number={number}
-                id={id}
-                Updating={() => startUpdating({ id, name, number })}
-              />
-            ))}
-          </Table>
-        </TableContainer>
+        <>
+          {contacts.length > 0 && <Filter />}
+          <TableContainer
+            component={Paper}
+            sx={{ bgcolor: 'rgb(240, 240, 240, 0.4)' }}
+          >
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead sx={{ color: 'blue' }}>
+                <TableRow>
+                  <TableCell
+                    sx={{ color: '#1976d3', fontWeight: 'bold', fontSize: 16 }}
+                  >
+                    Name
+                  </TableCell>
+                  <TableCell
+                    sx={{ color: '#1976d3', fontWeight: 'bold', fontSize: 16 }}
+                  >
+                    Number
+                  </TableCell>
+                  <TableCell
+                    sx={{ color: '#1976d3', fontWeight: 'bold', fontSize: 16 }}
+                  >
+                    Delete
+                  </TableCell>
+                  <TableCell
+                    sx={{ color: '#1976d3', fontWeight: 'bold', fontSize: 16 }}
+                  >
+                    Update
+                  </TableCell>
+                </TableRow>
+              </TableHead>
+              {filteredContacts.map(({ id, name, number }) => (
+                <ContactsListItem
+                  key={id}
+                  name={name}
+                  number={number}
+                  id={id}
+                  Updating={() => startUpdating({ id, name, number })}
+                />
+              ))}
+            </Table>
+          </TableContainer>
+        </>
       )}
     </Wrapper>
   );

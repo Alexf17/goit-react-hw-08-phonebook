@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { toast } from 'react-toastify';
+
 import TextField from '@mui/material/TextField';
 import { register } from 'redux/auth/operations';
 
@@ -29,6 +31,15 @@ export default function Register() {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    if (password.length < 7) {
+      toast.warning(`Password must contain at least 7 characters !`, {
+        position: toast.POSITION.TOP_RIGHT,
+        theme: 'colored',
+        pauseOnHover: true,
+      });
+      return;
+    }
     dispatch(register({ name, email, password }));
     setName('');
     setEmail('');
@@ -37,8 +48,8 @@ export default function Register() {
 
   return (
     <div>
+      <PageTitle>Sign up page</PageTitle>
       <Form autoComplete="off" onSubmit={handleSubmit}>
-        <PageTitle>Sign up page</PageTitle>
         <TextField
           label="Name"
           type="text"

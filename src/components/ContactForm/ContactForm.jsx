@@ -3,14 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 
-import {
-  Wrap,
-  Form,
-  InputWpap,
-  Label,
-  Input,
-  Button,
-} from './ContactForm.styled';
+import { Wrap, Form, InputWpap, Label, Input } from './ContactForm.styled';
+import { Button } from '@mui/material';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -56,7 +50,9 @@ export const ContactForm = () => {
             required
           />
         </InputWpap>
-        <Button type="submit">Add contact</Button>
+        <Button variant="contained" size="small" type="submit">
+          Add contact
+        </Button>
       </Form>
     </Wrap>
   );
