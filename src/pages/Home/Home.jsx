@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 
-import { Wrapper, NavLi } from './Home.styled';
+import { Wrapper, NavLi, HelloText, Block } from './Home.styled';
 
 export default function Home() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -20,8 +20,8 @@ export default function Home() {
       ) : (
         <>
           <PageTitle>Welcome to Phonebook</PageTitle>
-          <span>
-            To use our application you mast to
+          <Block>
+            <HelloText>To use our application you mast to</HelloText>
             <NavLi to="/register">
               <Button variant="text" size="small">
                 Register
@@ -33,7 +33,7 @@ export default function Home() {
                 LogIn
               </Button>
             </NavLi>
-          </span>
+          </Block>
         </>
       )}
     </Wrapper>
