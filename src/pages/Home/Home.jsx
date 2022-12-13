@@ -19,7 +19,6 @@ export default function Home() {
         </>
       ) : (
         <>
-          {' '}
           <PageTitle>Welcome to Phonebook</PageTitle>
           <span>
             To use our application you mast to
@@ -33,7 +32,7 @@ export default function Home() {
               <Button variant="text" size="small">
                 LogIn
               </Button>
-            </NavLi>{' '}
+            </NavLi>
           </span>
         </>
       )}

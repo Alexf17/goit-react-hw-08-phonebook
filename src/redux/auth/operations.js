@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+import { toast } from 'react-toastify';
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { setAuthHeader, clearAuthHeader } from 'axiosHelpers/config';
+import { setAuthHeader, clearAuthHeader } from 'api/config';
 
 export const register = createAsyncThunk(
   'auth/register',
@@ -25,6 +27,17 @@ export const logIn = createAsyncThunk(
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
+      if (error.response.status === 400) {
+        toast.warning(
+          'Invalid email or password,check spelling and try again',
+          {
+            position: toast.POSITION.TOP_RIGHT,
+            theme: 'colored',
+            pauseOnHover: true,
+          }
+        );
+      }
+
       return rejectWithValue(error.message);
     }
   }

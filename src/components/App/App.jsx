@@ -5,10 +5,10 @@ import { Route, Routes } from 'react-router-dom';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 import { refreshUser } from 'redux/auth/operations';
 
-import { Loader } from 'components/Loader/Loader';
-import { Layout } from 'components/Layout/Layout';
-import { RestrictedRoute } from 'components/RestrictedRoute';
-import { PrivateRoute } from 'components/PrivateRoute';
+import { Loader } from 'components/UI/Loader/Loader';
+import { Layout } from 'components/UI/Layout/Layout';
+import { RestrictedRoute } from 'Routes/RestrictedRoute';
+import { PrivateRoute } from 'Routes/PrivateRoute';
 import Contacts from 'pages/Contaсts/Contaсts';
 
 const Home = lazy(() => import('../../pages/Home/Home'));

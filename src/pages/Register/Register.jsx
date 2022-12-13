@@ -77,7 +77,6 @@ export default function Register() {
           onChange={handleChange}
         />
         <Button type="submit" variant="outlined" size="small">
-          {' '}
           Submit and Sign up
         </Button>
       </Form>
